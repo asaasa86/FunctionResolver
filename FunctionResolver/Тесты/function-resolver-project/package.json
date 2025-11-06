@@ -1,0 +1,31 @@
+{
+  "name": "function-resolver-project",
+  "version": "1.0.0",
+  "description": "Поиск локального и глобального минимума функции",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "jest",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "src/js/**/*.js",
+      "!src/js/chartRenderer.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+    
+  }
+}
